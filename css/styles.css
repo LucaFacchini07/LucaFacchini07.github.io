@@ -1,0 +1,250 @@
+/* General */
+#text {
+    font-size: 1.5em;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle at 50.3% 44.5%, rgb(6, 0, 96) 0%, rgb(13, 0, 65) 100.2%);
+    background-attachment: fixed;
+    color: #ffffff;
+    font: 400 1rem/1.625rem "Open Sans", sans-serif;
+}
+
+h1, h2 {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.h1-large {
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    line-height: 2.5rem; /* Adjust the line height as needed */
+}
+
+.h1-small {
+    font-size: 1.5rem;
+}
+
+.p-header {
+    font-size: 2.5rem;
+}
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 0px #fff;
+    }
+    
+    to {
+        text-shadow: 0 0 25px #0220a7, 0 0 50px #00097d, 0 0 80px #0c007b;
+    }
+}
+
+/* Navbar */
+
+.navbar {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Added alignment for smaller screens */
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #898989;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.header .btn-solid-lg {
+    margin-top: 1.5rem;
+}
+
+.header .h1-large {
+    margin-bottom: 1.75rem;
+}
+
+
+/* Button */
+
+.btn-solid-lg {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #0b36a8;
+    background-color: #0b36a8;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-solid-lg:hover {
+    background-color: transparent;
+    color: #0b36a8;
+}
+
+/* About section */
+
+.about-section {
+    background-color: #22125c;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.about-content {
+    background-color: #0a002b;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-content h2 {
+    text-transform: uppercase;
+}
+
+.about-content p {
+    font-size: 1rem;
+}
+
+/* Footer */
+
+.footer {
+    background-color: rgb(15, 15, 17);
+    padding: 3rem;
+    text-align: center;
+}
+
+.footer .btn-solid-lg {
+    margin-top: 1rem;
+}
+
+/* Popup */
+
+.popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+    .h1-large {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .header .h1-large {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-solid-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .about-content {
+        padding: 10px;
+    }
+
+    .about-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 2rem;
+    }
+
+    .footer .btn-solid-lg {
+        margin-top: 0.5rem;
+    }
+
+    .popup {
+        top: 10%;
+    }
+}
