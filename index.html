@@ -14,53 +14,57 @@
     <link rel="icon" href="images/favicon.png">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <h1 class="h1-small">Luca Facchini</h1>
-        </div>
-        <div>
-            <ul>
-                <li><a href="https://github.com/lucafacchini1" target="_blank">GITHUB</a></li>
-                <li><a href="#" id="discord-link">DISCORD</a></li>
-            </ul>
-        </div>
-        
-        <script>
-            var discordLink = document.getElementById('discord-link');
-        
-            discordLink.addEventListener('click', function(event) {
-                // Impedisci il comportamento predefinito del link (aprire un'altra pagina)
-                event.preventDefault();
-        
-                var popup = document.createElement('div');
-                popup.className = 'popup';
-                popup.innerHTML = `
-                    <div class="popup-content">
-                        <span class="close-popup">&times;</span>
-                        <img src="images/discord.png" alt="Discord logo">
-                        <p>lucafacchini1</p>
-                    </div>
-                `;
-        
-                document.body.appendChild(popup);
-        
-                var closeButton = popup.querySelector('.close-popup');
-                closeButton.addEventListener('click', function() {
-                    document.body.removeChild(popup);
-                });
-            });
-        </script>
-    </nav>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <h1 class="h1-large">Luca Facchini's here.</h1>
-            <p class="p-header" id="text"></p>
-            <a class="btn-solid-lg" href="https://github.com/lucafacchini1" target="_blank">MY GITHUB</a>
-        </div>
-    </header>
+    <div class="container-full-screen">
+        
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <h1 class="h1-small">Luca Facchini</h1>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="https://github.com/lucafacchini1" target="_blank">GITHUB</a></li>
+                    <li><a href="#" id="discord-link">DISCORD</a></li>
+                </ul>
+            </div>
+            
+            <script>
+                var discordLink = document.getElementById('discord-link');
+            
+                discordLink.addEventListener('click', function(event) {
+                    // Impedisci il comportamento predefinito del link (aprire un'altra pagina)
+                    event.preventDefault();
+            
+                    var popup = document.createElement('div');
+                    popup.className = 'popup';
+                    popup.innerHTML = `
+                        <div class="popup-content">
+                            <span class="close-popup">&times;</span>
+                            <img src="images/discord.png" alt="Discord logo">
+                            <p>lucafacchini1</p>
+                        </div>
+                    `;
+            
+                    document.body.appendChild(popup);
+            
+                    var closeButton = popup.querySelector('.close-popup');
+                    closeButton.addEventListener('click', function() {
+                        document.body.removeChild(popup);
+                    });
+                });
+            </script>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="h1-large">Luca Facchini's here.</h1>
+                <p class="p-header" id="text"></p>
+                <a class="btn-solid-lg" href="https://github.com/lucafacchini1" target="_blank">MY GITHUB</a>
+            </div>
+        </header>
+    </div>
 
     <div class="about-section">
         <div class="about-content">
