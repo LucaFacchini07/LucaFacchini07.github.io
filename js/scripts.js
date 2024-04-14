@@ -2,19 +2,19 @@ const staticText = "I am ";
 const cursor = "|"; 
 const dynamicTexts = ["a Student", "a Networking Lover", "a Security Enthusiast", "a Tech Nerd"]; 
 
-let count = 0; // Variabile per tener traccia della parola corrente
-let index = 0; // Variabile per tener traccia della lettera corrente
-let currentText = ""; // Variabile per memorizzare la parola corrente
-let letter = ""; // Variabile per memorizzare la lettera corrente
+let count = 0; // word tracker
+let index = 0; // letter tracker
+let currentText = ""; // current word
+let letter = ""; // current letter
 
 function type() {
     if (count === dynamicTexts.length) {
         count = 0;
     }
-    currentText = dynamicTexts[count]; // Take the current word from the list
+    currentText = dynamicTexts[count]; // take the current word from the list
     letter = currentText.slice(0, ++index); // Take the current letter
     const textToShow = staticText + letter + cursor; // Add the cursor
-    document.getElementById("text").textContent = textToShow; // Update the HTML docss
+    document.getElementById("text").textContent = textToShow; // Update the HTML doc
 
     if (letter.length === currentText.length) { // If the word is completely written
         setTimeout(erase, 500); // Wait 0.5s before erasing the word
