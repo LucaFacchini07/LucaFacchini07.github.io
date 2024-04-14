@@ -57,6 +57,18 @@ h1 {
     }
 }
 
+/* Navbar + Header Container */
+.container-full-screen {
+    height: 100vh;
+}
+
+.container-full-screen .header {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
 /* Navbar */
 
 .navbar {
@@ -103,7 +115,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     text-align: center;
 }
 
@@ -138,13 +149,13 @@ h1 {
 /* About section */
 
 .about-section {
-    background-color: #22125c;
+    background-color: #0a002e;
     padding: 3rem 0;
     text-align: center;
 }
 
 .about-content {
-    background-color: #0a002b;
+    background-color: #000000;
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
@@ -242,9 +253,5 @@ h1 {
 
     .footer {
         padding: 2rem;
-    }
-
-    .footer .btn-solid-lg {
-        margin-top: 0.5rem;
     }
 }
