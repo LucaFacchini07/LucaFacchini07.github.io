@@ -30,6 +30,7 @@
             var discordLink = document.getElementById('discord-link');
         
             discordLink.addEventListener('click', function(event) {
+                // Impedisci il comportamento predefinito del link (aprire un'altra pagina)
                 event.preventDefault();
         
                 var popup = document.createElement('div');
@@ -37,8 +38,8 @@
                 popup.innerHTML = `
                     <div class="popup-content">
                         <span class="close-popup">&times;</span>
-                        <img src="images/discord.png" alt="Discord Logo">
-                        <h2>lucafacchini1</h2>
+                        <img src="images/discord.png" alt="Discord logo">
+                        <p>lucafacchini1</p>
                     </div>
                 `;
         
@@ -49,7 +50,7 @@
                     document.body.removeChild(popup);
                 });
             });
-        </script> 
+        </script>
     </nav>
 
     <!-- Header -->
