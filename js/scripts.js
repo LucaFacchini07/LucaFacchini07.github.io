@@ -1,6 +1,6 @@
 const staticText = "I am ";
 const cursor = "|"; 
-const dynamicTexts = ["a Student", "a Networking Lover", "a Security Enthusiast", "a Tech Nerd"]; 
+const dynamicTexts = ["a Student", "a Developer", "a Linux Bro", "a CyberSecurity Lover"]; 
 
 let count = 0; // word tracker
 let index = 0; // letter tracker
@@ -20,7 +20,7 @@ function type() {
         setTimeout(erase, 500); // Wait 0.5s before erasing the word
     } else {
         const nextChar = currentText[index];
-        const timeoutDuration = 200;
+        const timeoutDuration = 150;
         setTimeout(type, timeoutDuration); // Continue writing
     }
 }
@@ -34,7 +34,7 @@ function erase() {
     letter = currentText.slice(0, --index); // Erase the current letter
     const textToShow = staticText + letter + cursor; // Add the cursor
     document.getElementById("text").textContent = textToShow; // Update the HTML
-    setTimeout(erase, 100); // Continue erasing
+    setTimeout(erase, 20); // Continue erasing
 }
 
 type();
