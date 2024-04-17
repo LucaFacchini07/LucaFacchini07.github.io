@@ -1,6 +1,6 @@
 const staticText = "I am ";
 const cursor = "|"; 
-const dynamicTexts = ["a Student", "a Developer", "a Linux Bro", "a CyberSecurity Lover"]; 
+const dynamicTexts = ["a Student", "a Networks Appassionate", "a Linux Bro", "a CyberSecurity Lover"]; 
 
 let count = 0; // word tracker
 let index = 0; // letter tracker
